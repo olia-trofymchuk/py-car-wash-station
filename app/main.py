@@ -26,8 +26,8 @@ class CarWashStation:
         diff = self.clean_power - car.clean_mark
         if diff <= 0:
             return 0.0
-        else:
-            price = car.comfort_class * (self.clean_power - car.clean_mark) * self.average_rating / self.distance_from_city_center
+        delta = self.average_rating / self.distance_from_city_center
+        price = car.comfort_class * (self.clean_power - car.clean_mark) * delta
         return round(price, 1)
 
     def wash_single_car(self, car):
