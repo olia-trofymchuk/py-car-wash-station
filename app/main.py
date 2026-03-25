@@ -41,7 +41,7 @@ class CarWashStation:
         price = car.comfort_class * (self.clean_power - car.clean_mark) * delta
         return round(price, 1)
 
-    def wash_single_car(self, car: str ) -> None:
+    def wash_single_car(self, car: str) -> None:
         if car.clean_mark < self.clean_power:
             car.clean_mark = self.clean_power
 
